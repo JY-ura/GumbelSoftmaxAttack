@@ -1,0 +1,10 @@
+name: vgg
+in_channels: ${dataset.channels}
+num_class: ${dataset.num_class}
+num_layers: 11
+cnf:
+frame_number: ${dataset.frame_number}
+zero_init_residual:
+model_path: 
+neuron: LIF
+dnn_act: 

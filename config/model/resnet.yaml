@@ -1,0 +1,11 @@
+name: resnet # [resnet, dnn_resnet]
+in_channels: ${dataset.channels}
+num_class: ${dataset.num_class}
+num_layers: 18
+cnf: ADD
+frame_number: ${dataset.frame_number}
+zero_init_residual: True
+model_path: models/model_files/gesture-dvs_dnn_resnet_18_None_best_0.9609375.pth
+neuron: LIF
+
+dnn_act: 

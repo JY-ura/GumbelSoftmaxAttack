@@ -1,0 +1,27 @@
+# config for event generator
+name: torch # should be in [torch, custom, tempreture, sigmoid] recommend torch
+sample_num: 1 # number of samples for each gumbel softmax sample
+use_soft_event: False # use soft event or hard event
+
+# config for loss function
+main_loss_function: CrossEntropyLoss #[CrossEntropyLoss MarginLoss]
+regular_loss_function: L1Loss #[L1Loss MSELoss]
+regular_loss_reduction: mean #[sum mean]
+
+# config for scheduler for lamda , lamda*alpha
+warmup_epoch: 5
+lamda: 1
+
+# config for scheduler for tau
+max_tau: 2 # max temperature for gumbel softmax
+min_tau: 0.1 # min temperature for gumbel softmax
+decay_step: 100 # decay step for tau
+
+# config for alpha
+alpha_boundary: 2 # boundary for alpha
+init_alpha_mode: target # [default, random_add_indices, target] 
+#defaut: use the orginal event indices, target: use the target event indices, random_add_indices: randomly add indices to the orginal event indices
+
+add_position_label_mode: target # [random_except_target, target]
+#random_except_target: randomly add position except the target label position , target: use the target label position 
+target_position_ratio: 1.0 # ratio of target position number in the event sequence

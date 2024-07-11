@@ -1,0 +1,39 @@
+defaults:
+ - _self_
+ - attack: ours
+ - dataset: cifar10-dvs
+ - model: sew_resnet
+ - optimizer: adam
+ - transform: sew_gesture
+ - scheduler: CosALR # StepLR
+
+# use automatic mixed precision 
+use_amp: False
+use_grad_scaling: False
+gradient_accumulation_steps: 1
+one_step_samples: ${attack.sample_num}
+max_iteration: 100
+is_save_img: False
+save_path: ./visual/
+num_pic: 20
+
+gpu_idx: 1
+log_print: 10
+seed: 0
+
+main_loss_name: ${attack.main_loss_function}
+regular_loss_name: ${attack.regular_loss_function}
+regular_loss_reduction: ${attack.regular_loss_reduction}
+targeted: True
+kappa: 0.1 # it is a regularization parameter for the regularization loss
+use_soft_event: ${attack.use_soft_event} # use soft event in training for example [0.01, 0.02, 0.97]
+
+log_loss_interval: 10
+debug: False
+use_soft_logits: False # use the logits of soften events or harden events in validation
+
+
+project: project_name
+entity: ???
+name: ???
+tags: ???

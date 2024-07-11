@@ -1,0 +1,11 @@
+name: sew_resnet
+in_channels: ${dataset.channels}
+num_class: ${dataset.num_class}
+num_layers: 34
+cnf: ADD
+frame_number: ${dataset.frame_number}
+zero_init_residual: True
+model_path: models/model_files/sewresnet/cifar10-dvs_sew_resnet_34_best_67.2_best.pth
+neuron: LIF
+ # replace activation funciton into dnn function
+dnn_act:    # [relu sigmoid]

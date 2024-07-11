@@ -1,0 +1,3 @@
+name: sew_gesture
+T_train: 12
+# this dataaugment is from the paper sew_resnet

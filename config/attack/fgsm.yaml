@@ -1,0 +1,22 @@
+# config for event generator
+name: fgsm
+
+# config for loss function
+main_loss_function: CrossEntropyLoss #[CrossEntropyLoss MarginLoss]
+regular_loss_function: L1Loss #[L1Loss MSELoss]
+regular_loss_reduction: sum #[sum mean]
+
+# config for scheduler for lamda , lamda*alpha
+warmup_epoch: 5
+lamda: 1
+
+epsilon: 1
+
+threshold: 1
+
+
+
+# unused
+sample_num: 1
+use_soft_event: False
+init_alpha_mode: default # [default, random_add_indices, bin]

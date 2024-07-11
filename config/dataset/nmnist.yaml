@@ -1,0 +1,11 @@
+name: nmnist
+path: data/datasets/nmnist
+batch_size: 32
+num_class: 10
+channels: 2
+data_type: event
+split_by: number
+frame_number: 16
+frame_size: 34
+data_aug: False
+binary_frame: False

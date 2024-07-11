@@ -1,0 +1,2 @@
+name: CosALR
+T_max: 10 # satisfy T_max * gradient_accumulation_steps = max_iterations
