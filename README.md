@@ -4,12 +4,14 @@ This is the responsory for the paper "Exploring Vulnerabilities in Spiking Neura
 
 ## Requirements
 
+```
 torch ==  2.0.0+cu118
 torchvision == 0.15.1+cu118
 spikingjelly == 0.0.0.0.14
 snntorch == 0.6.4
 wandb == 0.16.1
 numpy == 1.23.5
+```
 
 To install all the requirements, run:
 
