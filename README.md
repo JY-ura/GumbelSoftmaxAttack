@@ -30,8 +30,6 @@ or you can choose to install them one by one.
 - `utils/`: the utils folder.
 - `main.py`: the main file to run the attack.
 - `attacker.py`: the attacker class files.
-- `fgsm.py`: the fgsm attack methods.
-- `main_frame_attack.py`: the grid-based representation attack.
 - `requirements.txt`: the requirements file.
 - `train.py`: train code.
 - `README.md`: this file.
