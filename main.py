@@ -9,7 +9,7 @@ import time
 import hydra
 import torch
 from ignite.utils import manual_seed
-from omegaconf import OmegaConf
+from omegaconf import OmegaConf, DictConfig
 
 import wandb
 from attacker import GumbelAttacker
